@@ -36,5 +36,5 @@ class ApplicationController < Sinatra::Base
     # no view to render
     # get_post
     @post = Post.find_by(id:params[:id])
-
+    @post.destroy
 end
