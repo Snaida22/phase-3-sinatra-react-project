@@ -27,6 +27,6 @@ class ApplicationController < Sinatra::Base
   patch '/notes/:id' do 
     # no view
     # update particular object with new attributes
-    
+    @post = Post.find_by(id:params[:id])
 
 end
