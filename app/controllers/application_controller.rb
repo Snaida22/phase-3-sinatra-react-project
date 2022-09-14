@@ -28,5 +28,5 @@ class ApplicationController < Sinatra::Base
     # no view
     # update particular object with new attributes
     @post = Post.find_by(id:params[:id])
-
+    @post.update(name: params[:name], updated: 
 end
