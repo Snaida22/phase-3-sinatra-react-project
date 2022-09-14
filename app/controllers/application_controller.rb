@@ -31,4 +31,8 @@ class ApplicationController < Sinatra::Base
     @post.update(name: params[:name], updated: params[:updated])
     redirect "/notes/#{@notes.id}"
   end  
+
+  delete '/notes/:id' do 
+    # no view to render
+    # get_post
 end
