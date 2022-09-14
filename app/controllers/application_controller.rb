@@ -16,7 +16,7 @@ class ApplicationController < Sinatra::Base
     @notes = Post.find_by(id:params[:id])
     @notes.to_json
 
-# end
+  end
 
 # post "/notes" do
 #   @post=Post.create(params)
