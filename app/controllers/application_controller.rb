@@ -18,10 +18,10 @@ class ApplicationController < Sinatra::Base
 
   end
 
-# post "/notes" do
-#   @post=Post.create(params)
-#    post = @post
-#    post.to_json()
-# end
+  post "/notes" do
+   @post=Post.create(params)
+    post = @post
+    post.to_json()
+  end
 
 end
