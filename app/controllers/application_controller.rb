@@ -24,9 +24,11 @@ class ApplicationController < Sinatra::Base
     post.to_json()
   end
 
-  patch '/notes/:id' do 
+  put '/notes/:id' do 
     # no view
     # update particular object with new attributes
+    @post = Post.find_by(id:params[:id])
+    @post.update(name: params[:name], updated: params[:updated])
 
   delete '/notes/:id' do 
     # no view to render
