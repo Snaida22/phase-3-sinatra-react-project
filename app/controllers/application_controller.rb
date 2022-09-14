@@ -24,7 +24,9 @@ class ApplicationController < Sinatra::Base
     post.to_json()
   end
 
-  
+  patch '/notes/:id' do 
+    # no view
+    # update particular object with new attributes
 
   delete '/notes/:id' do 
     # no view to render
