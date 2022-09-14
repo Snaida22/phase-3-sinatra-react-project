@@ -30,4 +30,5 @@ class ApplicationController < Sinatra::Base
     @post = Post.find_by(id:params[:id])
     @post.update(name: params[:name], updated: params[:updated])
     redirect "/notes/#{@notes.id}"
+  end  
 end
