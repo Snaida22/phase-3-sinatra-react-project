@@ -29,4 +29,5 @@ class ApplicationController < Sinatra::Base
     # update particular object with new attributes
     @post = Post.find_by(id:params[:id])
     @post.update(name: params[:name], updated: params[:updated])
+    redirect "/notes/#{@notes.id}"
 end
