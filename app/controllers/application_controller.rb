@@ -38,4 +38,5 @@ class ApplicationController < Sinatra::Base
     @post = Post.find_by(id:params[:id])
     @post.destroy
     redirect '/notes'
+  end  
 end
