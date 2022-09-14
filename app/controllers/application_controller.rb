@@ -12,4 +12,16 @@ class ApplicationController < Sinatra::Base
      post.to_json
   end
 
+  get '/notes/:id' do 
+    @notes = Post.find_by(id:params[:id])
+   @notes.to_json
+
+end
+
+post "/notes" do
+  @post=Post.create(params)
+   post = @post
+   post.to_json()
+end
+
 end

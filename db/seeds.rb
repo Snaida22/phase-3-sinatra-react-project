@@ -7,6 +7,8 @@ note2 = Post.create(name:"Bob from bar down the \n\n- Take out trash\n- Eat food
 
 note3 = Post.create(name:"Wash car")
 
+
+
 puts "✅ Done seeding!"
 # class CreateUsers < ActiveRecord::Migration[6.1]
 #     def change
