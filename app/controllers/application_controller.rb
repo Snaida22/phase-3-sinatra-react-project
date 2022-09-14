@@ -35,6 +35,6 @@ class ApplicationController < Sinatra::Base
   delete '/notes/:id' do 
     # no view to render
     # get_post
-    @post = Post.find_by
+    @post = Post.find_by(id:params[:id])
 
 end
