@@ -28,8 +28,10 @@ class ApplicationController < Sinatra::Base
     # no view
     # update particular object with new attributes
     @post = Post.find_by(id:params[:id])
-    @post.update(name: params[:name], updated: params[:updated])
-    redirect "/notes/#{@notes.id}"
+    post = @post
+    post.update(name: params[:name])
+    #redirect "/notes/#{@notes.id}"
+    post.to_json()
   end
 
   delete '/notes/:id' do 
